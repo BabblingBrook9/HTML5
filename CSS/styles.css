@@ -1,6 +1,44 @@
-h1 {
-  color: indigo;
+/* body {
+  color: blue;
 }
+h1,
 h2 {
-  color: maroon;
+  color: brown;
+} */
+/*  */
+/* #title {
+  color: blueviolet;
+  background-color: cornsilk;
 }
+#heading {
+  color: blue;
+}*/
+/*  */
+/* .green {
+  color: green;
+}
+.red {
+  color: red;
+}
+#title {
+  font-size: 40px;
+} */
+div {
+  color: blueviolet;
+  background-color: cornsilk;
+}
+span {
+  text-transform: uppercase;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+/* css rule */
+/* selectors */
+/* declaration block */
+/* deckaration */
+/* property */
+/* value */
