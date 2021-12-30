@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>units in CSS</title>
+    <style>
+         h1{
+            font-size: 60px;
+            background: blueviolet;
+            width: 300px;
+            height: 200px;
+        } 
+        /* Percent Values - RELATIVE */
+        .outer{
+            width: 200px;
+            height: 200px;
+            background: brown;
+        }
+        .inner{
+            width: 50%;
+            height: 50%;
+            background: green;
+        }
+        /* em - relative depends on parent
+        1em = 16 px default browser style
+        1em = base value
+         */
+        div{
+            font-size: 10px;
+        }
+        .relative{
+            font-size: 2em;
+        }
+        .absolute{
+            font-size: 32px;
+        }
+        /* rem - RELATIVE depends on root
+        1rem = 16px default browser style */
+        /* html{
+            font-size: 32px;
+        }
+        div{
+            font-size: 10px;
+        }
+        .relative{
+            font-size: 2rem;
+        }
+        .absolute{
+            font-size: 32px;
+        } */
+        /* vh - height - percent of the screen
+        vw - width - percent of the screen */
+        .banner{
+            width: 50vw;
+            height: 50vh;
+            background: red;
+        }
+        .another{
+            width: 100vw;
+            height: 100vh;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+  <h1>units in the css</h1>  
+  <div class="parent outer">
+      <div class="child inner"></div>
+  </div>
+  <div>
+    <h2 class="relative">relative</h2>
+  </div>
+  <div>
+    <h2 class="absolute">absolute</h2>
+  </div>
+  <div class="banner"></div>
+  <div class="another"></div>
+</body>
+</html>
