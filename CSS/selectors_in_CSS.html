@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        #title{
+            background: green;
+            color: silver;
+        }
+        #heading{
+            background: crimson;
+            color: gold;
+        }
+        /* p{
+            background: yellow;
+            color: black;
+        } */
+        .green{
+            background: green;
+        }
+        .red{
+            background: red;
+        }
+        #big{
+            font-size: 50px;
+        }
+        .uppercase{
+            text-transform: uppercase;
+        }
+        span{
+            text-transform: uppercase;
+        }
+        .crimson{
+            background: crimson;
+        }
+        /* descendant and child combinators  */
+        .header h1{
+            color: green;
+        }
+        .header > h1{
+            color: indigo;
+        }
+        div h1{
+            color: brown;
+        }
+        div > h1{
+            color: blue;
+        }
+        /* ::first-line and ::first-letter */ */
+        p::first-line{
+            font-weight: bold;
+        }
+        p::first-letter{
+            font-size: 3rem;
+        }
+        /* :hover */
+        p:hover{
+            color: darkred;
+        } 
+        .header:hover{
+            background: green;
+        }
+        a:hover{
+            text-transform: uppercase;
+        }
+        a:link{
+            color: crimson;
+        }
+        a:visited{
+            color: darkgreen;
+        }
+        a:active{
+            color: darkmagenta;
+        }
+        :root{
+            font-size: 150%;
+        }
+        h2{
+            font-size: 3rem;
+        }
+        .absolute{
+            font-size: 24px;
+        }
+        .responsive{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Title headihg</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, obcaecati nihil doloribus libero vero dolore voluptatem corporis dolorum ipsam commodi?</p>
+    <h1 id="heading">Another heading</h1>
+    <br>
+    <h3 id="big" class="green uppercase">I'm green</h3>
+    <h3 class="red">I'm red</h3>
+    <h3 class="green">I'm green</h3>
+    <h3 class="red">I'm red</h3>
+    <h3 class="green">I'm green</h3>
+    <h3 class="red">I'm red</h3>
+    <br>
+    <div>
+    <h3>heading number one</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum corporis magnam, nobis iste consequatur sequi fuga
+        explicabo iure tenetur velit!</p>
+    </div>
+    <div class="crimson">
+    <h3>heading number two</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <span class="red">Hey I'm uppercase</span> 
+        Illum corporis magnam, nobis iste consequatur sequi fuga 
+        <span>Hey I'm uppercase</span>
+        explicabo iure tenetur velit!</p>
+    </div>
+    <div class="header">
+        <h1>i'm child and descendant</h1>
+    </div>
+    <div class="header">
+        <ul>
+            <li>
+                <h1>i'm descendant</h1>
+            </li>
+        </ul>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime eius repellat fugit vel natus architecto fugiat magnam corporis, reiciendis vitae qui, numquam odit iusto debitis consectetur esse corrupti maiores placeat sit? Quas, aspernatur delectus hic non fugiat deserunt expedita quasi impedit iure dolorem amet facilis omnis eos, veritatis officia temporibus.</p>
+    <div class="something">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, in?
+    </div>
+    <a href="#">this is a link</a>
+    <a href="#">general link</a>
+    <a href="#">visited link</a>
+    <a href="#">hover link</a>
+    <a href="#">active link</a>
+    <h2>i'm heading</h2>
+    <p class="absolute">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit obcaecati magni soluta, quam architecto quisquam voluptatum dolor quidem recusandae vero?</p>
+    <p class="responsive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit obcaecati magni soluta, quam architecto quisquam voluptatum dolor quidem recusandae vero?</p>
+</body>
+</html>
