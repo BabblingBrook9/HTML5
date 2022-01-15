@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform, Transition, Animation</title>
+    <style>
+        /* div{
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        } */
+        /* div:hover{
+            background: indigo;
+        } */
+        .one{
+            background: red;
+            /* transform: translateX(50%); */
+            /* transform: scaleX(0.5); */
+            /* transform: rotateZ(45deg); */
+            /* transform: skewX(20deg); */
+        }
+        .two{
+            background: gold;
+            /* transform: translateY(-30px); */
+            /* transform: scaleY(2); */
+            /* transform: skewY(40deg); */
+        }
+        .three{
+            background: green;
+            /* transform: translate(20px, 30px); */
+            /* transform: scale(0.5, 0.5); */
+            /* transform: rotateX(80deg); */
+            /* transform: skew(25deg, -15deg); */
+            /* transition-property: background, border-radius;
+            transition-duration: 2s;
+            transition-delay: 3s; */
+            /* transition: background 3s 2s, border-radius 5s; */
+            transition: all 4s 3s;
+        }
+        .three:hover{
+            border-radius: 50%;
+            background: indigo;
+        }
+        /* how the transition takes place
+        transition-timing-function:
+        transition: all 3s here 5s
+        ease = default
+        ease = slow start,fast, slow end
+        linear = same speed start to end
+        ease-in = slow start
+        ease-out = slow end
+        ease-in-out - slow start, fast, slow end */
+        /* div{
+            width: 100px;
+            height: 100px;
+            background: crimson;
+            margin: 15px;
+            transition: all 1s;
+        } */
+        /* div:hover{
+            transform: translateX(100px);
+        } */
+        .ease{
+            transition-timing-function: ease;
+        }
+        .linear{
+            transition-timing-function: linear;
+        }
+        .ease-in{
+            transition-timing-function: ease-in;
+        }
+        .ease-out{
+            transition-timing-function: ease-out;
+        }
+        .ease-in-out{
+            transition-timing-function: ease-in-out;
+        }
+        /* transition 0 =100%
+        animation 0 1% 2% ....100% */
+        div{
+            width: 200px;
+            height: 100px;
+            color: white;
+            margin: 10px;
+        }
+        .transition{
+            background: green;
+            transition: all 2s linear;
+        }
+        .transition:hover{
+            background: red;
+            transform: translateX(100px);
+        }
+        .animation{
+            background: royalblue;
+            /* animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: 2; */
+            /* animation: move 10s infinite; */
+            animation: move 5s 2;
+            animation-fill-mode: forwards;
+        }
+        @keyframes move{
+            /* 0%{
+                transform: translateX(20px);
+            }
+            50%{
+                transform: translateX(100px);
+                background: red;
+            }
+            75%{
+                transform: translateX(-200px);
+                background: green;
+            }
+            100%{
+                transform: translateX(20px);
+                background: hotpink;
+            } */
+            0%{
+                opacity: 0;
+            }
+            25%{
+                opacity: 0.25;
+                transform: translateX(200px);
+            }
+            50%{
+                opacity: 1;
+                transform: translateX(-100px);
+            }
+            100%{
+                opacity: 0.5;
+                transform: translateX(20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div> -->
+    <!-- <div class="default">default</div>
+    <div class="ease">ease</div>
+    <div class="linear">linear</div>
+    <div class="ease-in">ease-in</div>
+    <div class="ease-out">ease-out</div>
+    <div class="ease-in-out">ease-in-out</div> -->
+    <div class="transition">transition</div>
+    <div class="animation">animation</div>
+</body>
+</html>
