@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables, Icons, Text-Shadow and Box-Shadow</title>
+    <!-- <script src="https://kit.fontawesome.com/fbce48d15f.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <style>
+        :root{
+            --primaryColor: #f15025;
+            --secondaryColor: #1313fa;
+            --mainTransition: all 0.4s linear;
+            --primaryBackground: lightblue;
+        }
+        .heading{
+            color: var(--primaryColor);
+            /* text-shadow: 1px 1px 6px gold; */
+            text-shadow: 33px 22px 2px rgba(255, 202, 60, 1);
+        }
+        .second-heading{
+            color: var(--primaryColor);
+            transition: var(--mainTransition);
+        }
+        .second-heading:hover{
+            color: var(--secondaryColor);
+        }
+        .text{
+            background: var(--primaryBackground);
+        }
+        .fa-home{
+            color: crimson;
+        }
+        .social-icon{
+            font-size: 4rem;
+            color: gold;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            background: green;
+            margin: 20px;
+            /* box-shadow: 5px 5px 6px darkgreen; */
+            transition: all 1s linear;
+        }
+        .box:hover{
+            box-shadow: 44px 16px 5px 5px rgba(3,59,0,0.75);-webkit-box-shadow: 44px 16px 5px 5px rgba(3,59,0,0.75);-moz-box-shadow: 44px 16px 5px 5px rgba(3,59,0,0.75);;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">main heading</h1>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ratione temporibus, quasi animi corrupti cupiditate nemo mollitia eaque omnis! Laborum.</p>
+    <h3 class="second-heading">another heading</h3>
+    <h3 class="third-heading">another heading</h3>
+    <i class="fas fa-home fa-3x"></i>
+    <span class="social-icon">
+        <i class="fab fa-facebook"></i>
+    </span>
+    <i class="fas fa-mountain fa-2x"></i>
+    <i class="fas fa-quidditch fa-4x"></i>
+    <div class="box"></div>
+</body>
+</html>
