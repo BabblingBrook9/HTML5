@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <style>
+        /* simple navbar */
+        /* *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+            line-height: 60px;
+            height: 60px;
+            text-align: center;
+            background-color: lightblue;
+        }
+        ul li{
+            display: inline-block;
+            width: 100px;
+        }
+        ul li a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: darkblue;
+            transition: transform 1s ease-in-out;
+        }
+        ul li a:hover{
+            transform: rotate(360deg);
+            border: 2px solid darkblue;
+            border-radius: 5px;
+        } */
+
+        /* Top fixed navbar */
+        /* *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            list-style-type: none;
+            height: 60px;
+            line-height: 60px;
+            background-color: green;
+            text-align: center;
+        }
+        ul li{
+            display: inline-block;
+            width: 100px;
+        }
+        ul li a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: silver;
+            transition: all 1s ease-in-out;
+        }
+        ul li a:hover{
+            background-color: darkgreen;
+        }
+        .box{
+            width: 100%;
+            text-align: center;
+            background-color: lightgreen;
+            margin-top: 60px;
+        } */
+
+        /* Fixed sidebar */
+        /* *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+            width: 20%;
+            position: fixed;
+            height: 100%;
+            background-color: crimson;
+            line-height: 60px;
+        }
+        ul li{
+            display: block;
+            width: 100%;
+        }
+        ul li a{
+            display: block;
+            text-align: center;
+            color: gold;
+            text-decoration: none;
+            transition: transform 1s ease-in-out;
+        }
+        ul li a:hover{
+            transform: translate(30%, 0);
+        }
+        .box{
+            float: right;
+            width: 80%;
+            height: 1600px;
+            margin-left: 30%;
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+        } */
+
+        /* dropdown menu */
+         /* *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: none;
+        }
+        nav>ul{
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background-color: darkgreen;
+            text-align: center;
+        }
+        nav>ul>li {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+        }
+        nav ul li a {
+            display: block;
+            text-decoration: none;
+            color: silver;
+        }
+        nav ul li a:hover{
+            border: 2px solid silver;
+        }
+        nav>ul>li:hover>ul {
+            display: block;
+        }
+        nav>ul>li>ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            background-color: darkgreen;
+            width: 100%;
+            text-transform: capitalize;
+        }  */
+
+        /* side dropdown */
+        /* *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+            line-height: 60px;
+        }
+        nav>ul li {
+            position: relative;
+            width: 100px;
+            background-color: darkgreen;
+            text-align: center;
+        }
+        nav>ul>li:hover>ul{
+            display: block;
+        }
+        nav ul li a{
+            text-decoration: none;
+            text-transform: capitalize;
+            color: silver;
+            display: block;
+        }
+        nav ul li a:hover{
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
+        nav>ul>li>ul{
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: none;
+        } */
+
+        /* multiple dropdown menus*/
+        /* *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        nav>ul{
+            height: 50px;
+            line-height: 50px;
+            position: absolute;
+        }
+        nav ul li{
+            position: relative;
+        }
+        nav>ul>li{
+            display: inline-block;
+            width: 100px;
+        }
+        nav ul li a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            text-transform: capitalize;
+            border: 2px solid silver;
+            border-radius: 5px;
+            background-color: green;
+            color: silver;
+            margin-top: 5px;
+        }
+        nav ul li a:hover{
+            background-color: darkgreen;
+        }
+        nav ul ul{
+            display: block;
+            width: 100%;
+            position: absolute;
+            visibility: hidden;
+        }
+        nav>ul>li:hover>ul{
+            visibility: visible;
+        }
+        nav>ul ul ul{
+            position: absolute;
+            top: -8%;
+            left: 100%;
+            visibility: hidden;
+        }
+        nav>ul ul>li:hover>ul{
+            visibility: visible;
+        } */
+
+        /* transparent navbar */
+        /* *{
+            margin: 0;
+            padding: 0;
+        }
+        .banner{
+            width: 100%;
+            height: 400px;
+            background-image: url(../images/DSC_0087.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        nav{
+            width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        ul{
+            width: 100%;
+            height: 40px;
+            line-height: 36px;
+            list-style-type: none;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        ul li{
+            float: left;
+            width: 25%;
+        }
+        ul li a{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color: gainsboro;
+            opacity: 0.5;
+            color: brown;
+        }
+        ul li a:hover{
+            border: 2px solid brown;
+            border-radius: 5px;
+        }  */
+        /* Transparent Navbar with Multiple Dropdown Menus */
+         /* *{
+            margin: 0;
+            padding: 0;
+        }
+        .banner{
+            width: 100%;
+            height: 600px;
+            background-image: url(../images/DSC_0087.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a:hover{
+            color: darkblue;
+        }
+        nav>ul {
+            height: 50px;
+            line-height: 50px;
+            margin-left: 20px;
+            position: absolute;
+            top: 10%;
+        }
+        nav>ul>li{
+            display: inline-block;
+            width: 100px;
+        }
+        nav ul li a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            text-transform: capitalize;
+            border: 2px solid;
+            border-radius: 5px;
+            background-color: darkgray;
+            opacity: 0.7;
+            color: brown;
+            margin-top: 5px;
+        }
+        nav ul li{
+            position: relative;
+        }
+        nav ul ul{
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            visibility: hidden;
+        }
+        nav>ul>li:hover>ul{
+            visibility: visible;
+        }
+        nav>ul ul ul{
+            position: absolute;
+            top: -8%;
+            left: 100%;
+            visibility: hidden;
+        }
+        nav>ul ul>li:hover>ul{
+            visibility: visible;
+        }   */
+        
+        /* Responsive Navbar */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: monospace;
+            font-size: 100%;
+            line-height: 1.5em;
+            background-color: wheat;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul li {
+            display: block;
+            width: 100%;
+            background-color: #ABABA4;
+            text-align: center;
+            line-height: 4em;
+            font-size: 1.2em;
+        }
+        div.button{
+            display: block;
+            width: 100%;
+            height: 5em;
+            line-height: 5em;
+            text-align: center;
+            background-color: #FEC883;
+            border-bottom: 0.5em solid #D59A6E;
+        } 
+        .logo{
+            opacity: 0.7;
+            border-radius: 2em;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: brown;
+            display: block;
+        }
+        nav ul li a:hover:not(.active){
+            color: #1D2637;
+            border: 2px solid brown;
+            border-radius: 0.5em;
+        }
+        .active{
+            color: #2E4059;
+            border: 2px solid #2E4059;
+            border-radius: 0.5em;
+        }
+        header{
+            margin: 0;
+            background-image: url(../images/DSC_0087.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 100%;
+            padding: 3em;
+            text-align: center;
+            border-bottom: 0.5em solid #D59A6E;
+            color: brown;
+        }
+        header h1{
+            font-size: 4em;
+            padding-top: 0.5em;
+            margin-bottom: 0.75em;
+            line-height: 1em;
+        }
+        header p{
+            text-align: center;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            font-size: 1.5em;
+            font-family: fantasy;
+            line-height: 1.2em;
+        }
+        .btn{
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: darkred;
+            margin: 1em;
+            padding: 2em;
+            background-color: #D5C4A7;
+            border-radius: 2em;
+        }
+        .btn:hover{
+            background-color: #AD8E79;
+            color: white;
+        }
+        @media screen and (min-width:500px) {
+            nav{
+                background-color: #ABABA4;
+            }
+            nav ul li{
+                display: inline-block;
+                width: 8em;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <!-- simple navbar -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Survey</a></li>
+        </ul>
+    </nav> -->
+    <!-- Top fixed navbar -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Survey</a></li>
+        </ul>
+    </nav>
+    <div class="box">
+        <h1>Some heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi totam consectetur modi? Cum, quasi expedita cumque voluptate, similique reiciendis, illum voluptas optio minima aliquam saepe maiores dicta distinctio.</p>
+    </div>  -->
+    <!-- dropdown menu -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Dropdown</a>
+                <ul>
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li><a href="#">link 3</a></li>
+                    <li><a href="#">link 4</a></li>
+                    <li><a href="#">link 5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>  -->
+    <!--multiple dropdown menus  -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Info</a>
+            </li>
+            <li><a href="#">Survey</a>
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">dropdown</a>
+                    <ul>
+                        <li><a href="#">link1</a></li>
+                        <li><a href="#">link 2</a></li>
+                        <li><a href="#">link 3</a></li>
+                        <li><a href="#">link 4</a>
+                            <ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>   -->
+    <!-- transparent navbar -->
+    <!-- <div class="banner">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Info</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Survey</a></li>
+            </ul>
+        </nav>
+    </div>  -->
+    <!-- Transparent Navbar with Multiple Dropdown Menus -->
+    <!-- <div class="banner">
+        <nav>
+            <ul>
+                <li><a href="#">home</a>
+                <ul>
+                    <li><a href="#">menu 1</a></li>
+                    <li><a href="#">menu 2</a></li>
+                    <li><a href="#">menu 3</a></li>
+                    <li><a href="#">dropdown</a>
+                        <ul>
+                            <li><a href="#">submenu 1</a></li>
+                            <li><a href="#">submenu 2</a></li>
+                            <li><a href="#">submenu 3</a></li>
+                            <li><a href="#">submenu 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+            </li>
+                <li><a href="#">info</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">dropdown</a>
+                <ul>
+                    <li><a href="#">menu 1</a></li>
+                    <li><a href="#">menu 2</a></li>
+                    <li><a href="#">menu 3</a></li>
+                    <li><a href="#">dropdown</a>
+                    <ul>
+                        <li><a href="#">submenu 1</a></li>
+                        <li><a href="#">submenu 2</a></li>
+                        <li><a href="#">submenu 3</a></li>
+                        <li><a href="#">submenu 4</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+            </ul>
+        </nav>
+    </div>   -->
+    <!-- Responsive Navbar -->
+    <nav>
+        <div class="button"><a href="#"><img src="../mountains/images/logo.png" height="100%" class="logo" alt="logo"></a></div>
+        <ul>
+            <li><a href="#" class="active"><span class="fa fa-home"> Home</span></a></li>
+            <li><a href="#"><span class="fa fa-info"> Info</span></a></li>
+            <li><a href="#"><span class="fas fa-mountain"> About</span></a></li>
+            <li><a href="#"><span class="fas fa-address-book"> Contact</span></a></li>
+        </ul>
+    </nav>
+    <header>
+        <section>
+            <h1>The Crimean Mountains</h1>
+            <p>There is no place like the mountains.</p>
+            <a href="#" class="btn">Click if you agree</a>
+        </section>
+    </header> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $ (document).ready(function (){
+            $(".button").click(function () {
+                $("nav ul").slideToggle("slow", function () {
+                    // Animation complete.
+                });
+            });
+        });
+    </script> 
+</body>
+</html>
