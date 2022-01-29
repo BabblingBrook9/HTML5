@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors from Julia</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid crimson;   
+            float: left;
+        }
+        .wrapper {
+            margin: 100px 0 0 100px;
+        }  
+        /* task 5
+        .second-row{
+            background: green;
+            margin: 10px 0px;
+        }  */
+        /* task 6 */
+        /* .even{
+            background: black;
+            border-color: black;
+        }
+        .odd{
+            background: white;
+            border-color: black;
+        } */
+        /* task 7
+        .box{
+            background: crimson;
+            margin: 3px;
+        }  */
+        /* task 8 */
+        /* #box_1, #box_4, #box_7 {
+        margin: 0 5px;
+        } */
+        /* task 9 */
+        /* #box_0, #box_4, #box_8 {
+            background: crimson;
+        } */
+        /* task 10 */
+        /* .first-row{
+            background: yellow;
+        }
+        .second-row{
+            background: white;
+        }
+        .third-row{
+            background: blueviolet;
+        } */
+        /* task 11 */
+        /* #box_0{
+            width: 0;
+            height: 0; 
+            border-left: 50px solid crimson;
+            border-right: 50px solid blue;
+            border-top: 50px solid yellow;
+            border-bottom: 50px solid green;
+        } */
+        /* task 12 */
+        /* #box_0{
+            width: 0;
+            height: 0;
+            border-left: 50px solid crimson;
+            border-top: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+        } */
+        /* task 13 */
+        /* #box_0{
+            width: 0;
+            height: 0;
+            border-left: 100px solid crimson;
+            border-top: 50px solid transparent;
+            border-right: none;
+            border-bottom: 50px solid transparent;
+        } */
+        /* task 14 */
+        /* #box_0{
+            width: 0;
+            height: 0;
+            border-left: 100px solid crimson;
+            border-top: 50px solid yellow;
+            border-right: none;
+            border-bottom: 50px solid green;
+        } */
+        /* task 15 */
+        /* .even{
+            width: 0;
+            height: 0;
+            border-left: 50px solid blue;
+            border-top: 50px solid white;
+            border-right: 50px solid blue;
+            border-bottom: 50px solid white;
+        }
+        .odd{
+            width: 0;
+            height: 0;
+            border-left: 50px solid blue;
+            border-top: 50px solid white;
+            border-right: 50px solid blue;
+            border-bottom: 50px solid white;  
+        }  */
+        /* task 16 */
+         /* .even{
+            width: 0;
+            height: 0;
+            border-left: 50px solid blue;
+            border-top: 50px solid white;
+            border-right: 50px solid blue;
+            border-bottom: 50px solid white;
+        }
+        .odd{
+            width: 0;
+            height: 0;
+            border-left: 50px solid white;
+            border-top: 50px solid red;
+            border-right: 50px solid white;
+            border-bottom: 50px solid red;  
+        }  */
+        /*task 17  */
+         /* .box{
+            background: crimson;
+            border-radius: 50%;
+        }  */
+        /* task 18 */
+        #box_4{
+            background: gold;
+        }
+        #box_1, #box_8, #box_3, #box_0{
+            background: red;
+        }
+        #box_2{
+            width: 0;
+            height: 0;
+            border-left: 50px solid gold;
+            border-top: 50px solid red;
+            border-right: 50px solid red;
+            border-bottom: 50px solid gold;
+        }
+        #box_5{
+            width: 0;
+            height: 0;
+            border-left: 50px solid gold;
+            border-top: 50px solid gold;
+            border-right: 50px solid red;
+            border-bottom: 50px solid red;
+        } 
+        #box_6{
+            width: 0;
+            height: 0;
+            border-left: 50px solid red;
+            border-top: 50px solid gold;
+            border-right: 50px solid gold;
+            border-bottom: 50px solid red;
+        }
+        #box_7{
+            width: 0;
+            height: 0;
+            border-left: 50px solid gold;
+            border-top: 50px solid gold;
+            border-right: 50px solid red;
+            border-bottom: 50px solid red;
+        }     
+    </style>
+</head>
+<body>
+    <!-- task 1 -->
+    <div class="wrapper">
+        <div id="box_0" class="box even first-row"></div>
+        <div id="box_1" class="box odd first-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_2" class="box even first-row"></div>
+        <div id="box_3" class="box odd second-row"></div>
+        <div id="box_4" class="box even second-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_5" class="box odd second-row"></div>
+        <div id="box_6" class="box even third-row"></div>
+        <div id="box_7" class="box odd third-row"></div>
+        <div id="box_8" class="box even third-row"></div>
+    </div>
+    <br>
+    <!--task 2-->
+    <div class="wrapper">
+        <div id="box_0" class="box even first-row"></div>
+        <div id="box_1" class="box odd first-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_2" class="box even first-row"></div>
+        <div id="box_3" class="box odd second-row"></div>
+        <div id="box_4" class="box even second-row"></div>
+        <div id="box_5" class="box odd second-row"></div>
+        <div id="box_6" class="box even third-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_7" class="box odd third-row"></div>
+        <div id="box_8" class="box even third-row"></div>
+    </div>
+    <br>
+    <!--task 3 -->
+    <div class="wrapper">
+        <div id="box_0" class="box even first-row"></div>
+        <div id="box_1" class="box odd first-row"></div>
+        <div id="box_2" class="box even first-row"></div>
+        <div id="box_3" class="box odd second-row"></div>
+        <div id="box_4" class="box even second-row"></div>
+        <div id="box_5" class="box odd second-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_6" class="box even third-row"></div>
+        <div id="box_7" class="box odd third-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_8" class="box even third-row"></div>
+    </div>
+    <br>
+    <!--task 4 -->
+    <div class="wrapper">
+        <div id="box_0" class="box even first-row"></div>
+        <div id="box_1" class="box odd first-row"></div>
+        <div id="box_2" class="box even first-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_3" class="box odd second-row"></div>
+        <div id="box_4" class="box even second-row"></div>
+        <div id="box_5" class="box odd second-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_6" class="box even third-row"></div>
+        <div id="box_7" class="box odd third-row"></div>
+        <div id="box_8" class="box even third-row"></div>
+    </div>
+    <br>
+    <!--task 5 -->
+    <div class="wrapper">
+        <div id="box_0" class="box even first-row" width="100" ></div>
+        <div id="box_1" class="box odd first-row"></div>
+        <div id="box_2" class="box even first-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_3" class="box odd second-row"></div>
+        <div id="box_4" class="box even second-row"></div>
+        <div id="box_5" class="box odd second-row"></div>
+        <div style="clear:both;"></div>
+        <div id="box_6" class="box even third-row"></div>
+        <div id="box_7" class="box odd third-row"></div>
+        <div id="box_8" class="box even third-row"></div>
+    </div>
+</body>
+</html>
